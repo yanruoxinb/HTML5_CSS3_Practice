@@ -1,0 +1,62 @@
+table.responsive{
+    width: 98%;
+    margin: 0 auto;
+    box-shadow: aqua;
+    border: 1px solid skyblue;
+}
+table.responsive th,table.responsive td{
+    border: 1px solid salmon;
+    padding: .5em 1em;
+}
+table.responsive th{
+    background-color: aquamarine;
+}
+table.responsive .number,table.responsive .action{
+    text-align: center;
+}
+@media (max-width: 480px) {
+    table.responsive {
+        box-shadow: none;
+        border: none;
+    }
+    table.responsive thead{
+        display: none;
+    }
+    table.responsive tr,table.responsive td{
+        display: block;
+        border: none;
+        position: relative;
+    }
+    table.responsive .number {
+        text-align: left;
+        background-color: aquamarine;
+        padding-left: 28%;
+    }
+    table.responsive .number::before {
+        content: "课程序号";
+        position: absolute;
+        left:.5em;
+        top:.5em;
+        font-weight: bold;
+    }
+    table.responsive.name{
+        text-align: left;
+        background-color: aquamarine;
+    }
+    table.responsive.name::before{
+        content: "课程名称";
+        position: absolute;
+        left:.5em;
+        top:.5em;
+        font-weight: bold;
+    }
+    table.responsive.action{
+        position: absolute;;
+        right: 0;
+        top:0;
+    }
+
+
+
+
+}

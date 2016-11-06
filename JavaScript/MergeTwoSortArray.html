@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+       function MergeTwoSortArray() {
+           let arr1=[1,5,6,8,22,56,99,123];
+           let arr2=[1,3,5,6,7,24,25,61,99,231];
+           let result=[];
+           let i=0,j=0;
+           let lena1=arr1.length;
+           let lena2=arr2.length;
+           while(i<lena1&&j<lena2) {
+               if(arr1[i]>arr2[j]){
+                   result.push(arr2[j]);
+                   j++;
+               }
+               else {
+                   result.push(arr1[i]);
+                   i++;
+               }
+           }
+           while(i<arr1.length){
+               result.push(arr1[i]);
+               i++;
+           }
+           while (j<arr2.length){
+               result.push(arr2[j]);
+               j++;
+           }
+
+           return result;
+       }
+
+
+
+    </script>
+
+</head>
+<body onload="MergeTwoSortArray()">
+
+</body>
+</html>
